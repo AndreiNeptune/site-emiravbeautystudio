@@ -1,68 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://elysiabeautylounge.ro/</loc>
+    <loc>https://emiravbeautystudio.ro/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://elysiabeautylounge.ro/manichiura-pedichiura</loc>
+    <loc>https://emiravbeautystudio.ro/despre-noi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elysiabeautylounge.ro/coafor-extensii</loc>
+    <loc>https://emiravbeautystudio.ro/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://emiravbeautystudio.ro/galerie</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://emiravbeautystudio.ro/pachete-beauty</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://emiravbeautystudio.ro/manichiura</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elysiabeautylounge.ro/make-up</loc>
+    <loc>https://emiravbeautystudio.ro/pedichiura</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elysiabeautylounge.ro/sprancene</loc>
+    <loc>https://emiravbeautystudio.ro/make-up</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elysiabeautylounge.ro/epilare-definitiva</loc>
+    <loc>https://emiravbeautystudio.ro/spalat-coafat</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elysiabeautylounge.ro/pachete-beauty</loc>
+    <loc>https://emiravbeautystudio.ro/vopsit-tratamente</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elysiabeautylounge.ro/galerie</loc>
+    <loc>https://emiravbeautystudio.ro/cosmetica</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://elysiabeautylounge.ro/despre-noi</loc>
+    <loc>https://emiravbeautystudio.ro/epilare-cu-ceara</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://elysiabeautylounge.ro/contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://elysiabeautylounge.ro/termeni-si-conditii</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://elysiabeautylounge.ro/politica-de-confidentialitate</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://elysiabeautylounge.ro/politica-cookie</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.8</priority>
   </url>
 </urlset>
