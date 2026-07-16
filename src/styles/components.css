@@ -1118,49 +1118,57 @@
    CONTACT STRIP
    ═══════════════════════════════════════════ */
 .contact-strip {
-  background: var(--color-bej);
-  padding: var(--space-2xl) 0;
+  background: var(--color-floral-white);
+  padding: var(--space-3xl) 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .contact-strip__inner {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: var(--space-xl);
-  flex-wrap: wrap;
+  text-align: center;
+  gap: var(--space-lg);
 }
 
 .contact-strip__info {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xs);
+  align-items: center;
+  gap: var(--space-sm);
 }
 
 .contact-strip__chip {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-xs);
-  font-weight: var(--weight-semibold);
-  font-size: var(--text-md);
+  justify-content: center;
+  gap: var(--space-sm);
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
   color: var(--color-noir);
 }
 
 .contact-strip__chip::before {
   content: '✦';
   color: var(--color-accent);
-  margin-right: var(--space-xs);
+  font-size: 1.2em;
 }
 
 .contact-strip__details {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--color-warm-gray);
+  max-width: 600px;
+  line-height: 1.6;
   margin-bottom: 0;
 }
 
 .contact-strip__actions {
   display: flex;
-  gap: var(--space-sm);
+  gap: var(--space-md);
+  justify-content: center;
   flex-wrap: wrap;
+  margin-top: var(--space-sm);
 }
 
 /* ═══════════════════════════════════════════
