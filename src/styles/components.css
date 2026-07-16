@@ -132,10 +132,6 @@
   transition: all var(--duration-normal) var(--ease-out);
 }
 
-.navbar.scrolled .navbar__logo {
-  /* No background/border anymore */
-}
-
 .navbar.scrolled .navbar__logo img {
   height: 44px;
 }
