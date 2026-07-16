@@ -28,11 +28,13 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        manichiura: resolve(__dirname, 'manichiura-pedichiura.html'),
-        coafor: resolve(__dirname, 'coafor-extensii.html'),
+        manichiura: resolve(__dirname, 'manichiura.html'),
+        pedichiura: resolve(__dirname, 'pedichiura.html'),
+        spalatCoafat: resolve(__dirname, 'spalat-coafat.html'),
+        vopsitTratamente: resolve(__dirname, 'vopsit-tratamente.html'),
         makeup: resolve(__dirname, 'make-up.html'),
-        sprancene: resolve(__dirname, 'sprancene.html'),
-        epilare: resolve(__dirname, 'epilare-definitiva.html'),
+        cosmetica: resolve(__dirname, 'cosmetica.html'),
+        epilare: resolve(__dirname, 'epilare-cu-ceara.html'),
         pachete: resolve(__dirname, 'pachete-beauty.html'),
         galerie: resolve(__dirname, 'galerie.html'),
         despre: resolve(__dirname, 'despre-noi.html'),

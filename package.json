@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node inline-css.cjs && node inline-js.cjs && node move-html-to-folders.cjs",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
