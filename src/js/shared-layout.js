@@ -147,6 +147,9 @@ function getFooterHTML() {
           <p><strong>Adresă:</strong> Str. Grădinarilor 30, Pantelimon, Ilfov</p>
           <p><strong>Program L–S:</strong> 10:00–21:00</p>
           <p><strong>Program D:</strong> Închis</p>
+          <div style="margin-top: 1rem; border-radius: 8px; overflow: hidden; height: 160px;">
+            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Strada%20Gradinarilor%2030%2C%20Pantelimon&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+          </div>
         </div>
       </div>
       <div class="footer__bottom">
