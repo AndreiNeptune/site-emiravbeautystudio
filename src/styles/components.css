@@ -1140,19 +1140,16 @@
 }
 
 .contact-strip__chip {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--space-sm);
+  gap: 0;
   font-family: var(--font-heading);
-  font-size: var(--text-2xl);
+  font-size: var(--text-3xl);
   color: var(--color-noir);
-}
-
-.contact-strip__chip::before {
-  content: '✦';
-  color: var(--color-accent);
-  font-size: 1.2em;
+  line-height: 1.1;
+  margin-bottom: var(--space-xs);
 }
 
 .contact-strip__details {
