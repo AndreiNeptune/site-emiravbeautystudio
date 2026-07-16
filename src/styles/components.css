@@ -703,11 +703,12 @@
 .price-table td:first-child {
   display: flex;
   flex-grow: 1;
-  align-items: baseline;
+  align-items: flex-end;
   font-weight: 600;
   color: var(--color-noir);
   font-size: var(--text-md);
-  white-space: nowrap;
+  white-space: normal;
+  padding-right: var(--space-xs) !important;
 }
 
 .price-table td:first-child::after {
