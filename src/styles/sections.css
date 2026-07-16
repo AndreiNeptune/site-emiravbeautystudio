@@ -46,6 +46,11 @@
   z-index: 2;
   max-width: 700px;
   padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .hero__kicker {
@@ -59,14 +64,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-}
-
-.hero__kicker::before {
-  content: '';
-  display: inline-block;
-  width: 40px;
-  height: 1px;
-  background: var(--color-accent-light);
+  justify-content: center;
 }
 
 .hero__script {
@@ -101,6 +99,7 @@
   gap: var(--space-md);
   margin-bottom: var(--space-3xl);
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .hero__badges {
@@ -108,6 +107,7 @@
   gap: var(--space-md);
   flex-wrap: wrap;
   max-width: 550px;
+  justify-content: center;
 }
 
 .hero__badge {
