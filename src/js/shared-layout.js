@@ -79,15 +79,24 @@ function getDrawerHTML() {
       <div class="mobile-drawer__logo"><img src="/images/gallery/Asset-1.png" alt="Emira V Beauty Studio" style="height: 38px; width: auto; object-fit: contain;"></div>
       <nav class="mobile-drawer__nav">
         <a href="/" class="mobile-drawer__link">Acasă</a>
-        <span class="mobile-drawer__link" style="color:var(--color-accent);font-weight:600;">Servicii</span>
-        <div class="mobile-drawer__submenu">
-          <a href="/manichiura">Manichiură</a>
-          <a href="/pedichiura">Pedichiură</a>
-          <a href="/epilare-cu-ceara">Epilare cu Ceară</a>
-          <a href="/cosmetica">Cosmetică & Tratamente Faciale</a>
-          <a href="/spalat-coafat">Coafor — Spălat & Coafat</a>
-          <a href="/vopsit-tratamente">Coafor — Vopsit & Tratamente Păr</a>
+        
+        <div class="mobile-drawer__accordion-item">
+          <button class="mobile-drawer__services-trigger" aria-expanded="false">
+            <span>Servicii</span>
+            <span class="chevron"></span>
+          </button>
+          <div class="mobile-drawer__submenu">
+            <div class="mobile-drawer__submenu-inner">
+              <a href="/manichiura">Manichiură</a>
+              <a href="/pedichiura">Pedichiură</a>
+              <a href="/epilare-cu-ceara">Epilare cu Ceară</a>
+              <a href="/cosmetica">Cosmetică & Tratamente Faciale</a>
+              <a href="/spalat-coafat">Coafor — Spălat & Coafat</a>
+              <a href="/vopsit-tratamente">Coafor — Vopsit & Tratamente Păr</a>
+            </div>
+          </div>
         </div>
+
         <a href="/galerie" class="mobile-drawer__link">Galerie</a>
         <a href="/despre-noi" class="mobile-drawer__link">Despre Noi</a>
         <a href="/contact" class="mobile-drawer__link">Contact</a>

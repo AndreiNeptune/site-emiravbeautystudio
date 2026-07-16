@@ -59,6 +59,23 @@ export function initNavigation() {
     }
   });
 
+  // Mobile drawer accordion for services
+  const mobileServicesTrigger = document.querySelector('.mobile-drawer__services-trigger');
+  if (mobileServicesTrigger) {
+    mobileServicesTrigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isExpanded = mobileServicesTrigger.getAttribute('aria-expanded') === 'true';
+      mobileServicesTrigger.setAttribute('aria-expanded', !isExpanded);
+      
+      const submenu = mobileServicesTrigger.nextElementSibling;
+      if (!isExpanded) {
+        submenu.style.maxHeight = submenu.scrollHeight + 'px';
+      } else {
+        submenu.style.maxHeight = '0px';
+      }
+    });
+  }
+
   // Mega menu (desktop) toggle on click
   if (servicesTrigger) {
     const triggerLink = servicesTrigger.querySelector('.navbar__link');
