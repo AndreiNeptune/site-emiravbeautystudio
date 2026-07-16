@@ -1826,19 +1826,13 @@
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   text-align: center;
-  transition: transform var(--duration-normal);
+  transition: all var(--duration-normal) var(--ease-out);
+  border-bottom: 3px solid transparent;
 }
 .value-card:hover {
-  transform: translateY(-5px);
-}
-.value-card__number {
-  font-family: var(--font-heading);
-  font-size: 4rem;
-  color: var(--color-dusty-rose);
-  opacity: 0.3;
-  display: block;
-  line-height: 1;
-  margin-bottom: 0.5rem;
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-bottom: 3px solid var(--color-accent);
 }
 .value-card h3 {
   position: relative;
