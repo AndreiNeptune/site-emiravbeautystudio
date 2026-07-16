@@ -684,9 +684,22 @@
 
 .price-table tr {
   display: flex;
-  align-items: baseline;
+  align-items: flex-end;
   width: 100%;
   transition: transform var(--duration-normal) var(--ease-out);
+  position: relative;
+  z-index: 1;
+}
+
+.price-table tr::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 6px;
+  border-bottom: 2px dotted var(--color-warm-gray);
+  opacity: 0.4;
+  z-index: -1;
 }
 
 .price-table tr:hover {
@@ -697,28 +710,15 @@
 .price-table td {
   border: none !important;
   padding: 0 !important;
-  background: transparent !important;
+  background: var(--bg-color, var(--color-white)) !important;
 }
 
 .price-table td:first-child {
-  display: flex;
-  flex-grow: 1;
-  align-items: flex-end;
   font-weight: 600;
   color: var(--color-noir);
   font-size: var(--text-md);
-  white-space: normal;
   padding-right: var(--space-xs) !important;
-}
-
-.price-table td:first-child::after {
-  content: "";
-  flex-grow: 1;
-  border-bottom: 2px dotted var(--color-warm-gray);
-  opacity: 0.3;
-  margin: 0 var(--space-md);
-  position: relative;
-  top: -4px;
+  flex: 1;
 }
 
 .price-table td:nth-child(2) {
@@ -728,6 +728,7 @@
   color: var(--color-accent);
   white-space: nowrap;
   min-width: max-content;
+  padding-left: var(--space-xs) !important;
 }
 
 .price-table td:last-child:not(:nth-child(2)) {
@@ -745,9 +746,6 @@
   }
   .price-table td:nth-child(2) {
     font-size: var(--text-md);
-  }
-  .price-table td:first-child::after {
-    margin: 0 var(--space-xs);
   }
   .price-table td:last-child:not(:nth-child(2)) {
     margin-left: var(--space-sm);

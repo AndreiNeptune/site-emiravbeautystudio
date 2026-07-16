@@ -100,6 +100,7 @@ p {
 }
 
 .section {
+  --bg-color: var(--color-white);
   padding-block: var(--section-padding);
 }
 
@@ -112,11 +113,13 @@ p {
 }
 
 .section--bej {
-  background-color: var(--color-bej);
+  --bg-color: var(--color-bej);
+  background: var(--color-bej);
 }
 
 .section--noir {
-  background-color: var(--color-noir);
+  --bg-color: var(--color-noir);
+  background: var(--color-noir);
   color: var(--color-white);
 }
 
