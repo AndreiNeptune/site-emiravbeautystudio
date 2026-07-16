@@ -673,41 +673,85 @@
 /* Price Table */
 .price-table {
   width: 100%;
-  border-collapse: collapse;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.price-table tbody {
+  display: contents;
 }
 
 .price-table tr {
-  transition: background var(--duration-fast) var(--ease-out);
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  transition: transform var(--duration-normal) var(--ease-out);
 }
 
 .price-table tr:hover {
-  background: var(--color-accent-subtle);
+  transform: translateX(6px);
+  background: transparent;
 }
 
 .price-table td {
-  padding: var(--space-sm) var(--space-md);
-  font-size: var(--text-sm);
-  border-bottom: 1px solid var(--color-border);
+  border: none !important;
+  padding: 0 !important;
+  background: transparent !important;
 }
 
 .price-table td:first-child {
-  font-weight: var(--weight-medium);
+  display: flex;
+  flex-grow: 1;
+  align-items: baseline;
+  font-weight: 600;
   color: var(--color-noir);
-  padding-left: 0;
+  font-size: var(--text-md);
+  white-space: nowrap;
+}
+
+.price-table td:first-child::after {
+  content: "";
+  flex-grow: 1;
+  border-bottom: 2px dotted var(--color-warm-gray);
+  opacity: 0.3;
+  margin: 0 var(--space-md);
+  position: relative;
+  top: -4px;
 }
 
 .price-table td:nth-child(2) {
   font-family: var(--font-heading);
-  font-weight: var(--weight-semibold);
+  font-size: var(--text-lg);
+  font-weight: 600;
   color: var(--color-accent);
   white-space: nowrap;
+  min-width: max-content;
 }
 
-.price-table td:last-child {
-  color: var(--color-warm-gray-light);
-  text-align: right;
-  padding-right: 0;
+.price-table td:last-child:not(:nth-child(2)) {
+  margin-left: var(--space-md);
+  font-size: var(--text-sm);
+  color: var(--color-warm-gray);
   white-space: nowrap;
+  text-align: right;
+  min-width: 60px;
+}
+
+@media (max-width: 768px) {
+  .price-table td:first-child {
+    font-size: var(--text-base);
+  }
+  .price-table td:nth-child(2) {
+    font-size: var(--text-md);
+  }
+  .price-table td:first-child::after {
+    margin: 0 var(--space-xs);
+  }
+  .price-table td:last-child:not(:nth-child(2)) {
+    margin-left: var(--space-sm);
+    font-size: var(--text-xs);
+  }
 }
 
 .price-table .new-badge {
