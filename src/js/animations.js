@@ -27,6 +27,7 @@ export function initAnimations() {
   }
 
   initDomeReveal();
+  initParallaxImages();
 }
 
 function initDomeReveal() {
@@ -97,4 +98,20 @@ function initDomeReveal() {
       }
     }
   );
+}
+
+function initParallaxImages() {
+  const parallaxImages = document.querySelectorAll('.parallax-img');
+  parallaxImages.forEach(img => {
+    gsap.to(img, {
+      y: "10%",
+      ease: "none",
+      scrollTrigger: {
+        trigger: img.parentElement,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+      }
+    });
+  });
 }
