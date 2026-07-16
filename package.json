@@ -1,0 +1,17 @@
+{
+  "name": "site-elysiabeautylounge",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node inline-css.cjs && node inline-js.cjs && node move-html-to-folders.cjs",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "axios": "^1.17.0",
+    "sharp": "^0.34.5",
+    "vite": "^8.0.12",
+    "vite-plugin-singlefile": "^2.3.3"
+  }
+}
