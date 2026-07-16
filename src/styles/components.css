@@ -1625,3 +1625,12 @@
   }
 }
 
+
+/* ──── Dome Reveal ──── */
+.dome-content-wrapper {
+  position: relative;
+  z-index: 2;
+  background-color: var(--color-cream, #faf9f8);
+  will-change: transform, clip-path;
+  overflow: hidden;
+}

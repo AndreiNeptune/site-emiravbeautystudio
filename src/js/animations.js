@@ -1,6 +1,7 @@
-/* ═══════════════════════════════════════════════════════
-   Animations — Scroll Reveal via Intersection Observer
-   ═══════════════════════════════════════════════════════ */
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function initAnimations() {
   // Reveal elements on scroll
@@ -25,30 +26,75 @@ export function initAnimations() {
     revealElements.forEach(el => el.classList.add('revealed'));
   }
 
-  // Parallax on hero (subtle)
-  const heroBg = document.querySelector('.hero__bg img');
-  const hero = document.querySelector('.hero');
-  
-  if (heroBg && hero) {
-    let heroHeight = hero.offsetHeight;
-    
-    // Update height on resize
-    window.addEventListener('resize', () => {
-      heroHeight = hero.offsetHeight;
-    }, { passive: true });
+  initDomeReveal();
+}
 
-    let ticking = false;
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const scrollY = window.scrollY;
-          if (scrollY <= heroHeight) {
-            heroBg.style.transform = `translateY(${scrollY * 0.15}px) scale(1.05)`;
-          }
-          ticking = false;
-        });
-        ticking = true;
+function initDomeReveal() {
+  const hero = document.querySelector('.hero');
+  const heroBg = document.querySelector('.hero__bg img');
+  const heroContent = document.querySelector('.hero__content');
+  const domeWrapper = document.querySelector('.dome-content-wrapper');
+
+  if (!hero || !domeWrapper) return;
+
+  // 1. Pin the hero section
+  ScrollTrigger.create({
+    trigger: hero,
+    start: "top top",
+    end: "bottom top", // keeps hero pinned while scrolling past it
+    pin: true,
+    pinSpacing: false, // allows domeWrapper to scroll up and overlap it
+  });
+
+  // 2. Parallax and Fade for Hero Text
+  // The user requested: moves up with 30-50% scroll speed (parallax) 
+  // and fades out completely before being intersected by the dome.
+  if (heroContent) {
+    gsap.to(heroContent, {
+      y: -250, // parallax speed approx 30% of scroll height
+      opacity: 0,
+      ease: "none",
+      scrollTrigger: {
+        trigger: domeWrapper,
+        start: "top bottom", // when dome starts entering from bottom
+        end: "top 20%",      // completes fade out before the dome physically hits the text
+        scrub: true,
       }
-    }, { passive: true });
+    });
   }
+
+  // 3. Parallax for Hero Background
+  if (heroBg) {
+    gsap.to(heroBg, {
+      y: 150, // subtle move down for parallax
+      scale: 1.05,
+      ease: "none",
+      scrollTrigger: {
+        trigger: domeWrapper,
+        start: "top bottom",
+        end: "top top",
+        scrub: true,
+      }
+    });
+  }
+
+  // 4. Venetian Dome Reveal (Clip Path Animation)
+  // Optimized for mobile with vw units.
+  // Start: curved dome
+  // End: flat top
+  gsap.fromTo(domeWrapper, 
+    {
+      clipPath: "inset(0% 0% 0% 0% round 50vw 50vw 0px 0px / 15vw 15vw 0px 0px)"
+    },
+    {
+      clipPath: "inset(0% 0% 0% 0% round 0vw 0vw 0px 0px / 0vw 0vw 0px 0px)",
+      ease: "none",
+      scrollTrigger: {
+        trigger: domeWrapper,
+        start: "top bottom",
+        end: "top top",
+        scrub: true,
+      }
+    }
+  );
 }
