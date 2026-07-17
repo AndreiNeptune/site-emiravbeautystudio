@@ -213,12 +213,16 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: var(--color-noir);
+    color: var(--color-white);
+    transition: color var(--duration-normal) var(--ease-out);
     text-align: center;
     flex: 1;
     white-space: nowrap;
     padding: 0 var(--space-xs);
   }
+}
+.navbar.scrolled .navbar__mobile-brand {
+    color: var(--color-noir);
 }
 
 /* Mega Menu */
