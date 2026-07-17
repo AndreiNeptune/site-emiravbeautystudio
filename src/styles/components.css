@@ -94,16 +94,17 @@
   left: 0;
   right: 0;
   z-index: var(--z-sticky);
-  padding: var(--space-lg) 0;
+  padding: var(--space-md) var(--space-sm);
   transition: all var(--duration-normal) var(--ease-out);
+  pointer-events: none;
+}
+
+.navbar * {
+  pointer-events: auto;
 }
 
 .navbar.scrolled {
-  padding: var(--space-sm) 0;
-  background: rgba(253, 251, 247, 0.95);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  box-shadow: 0 1px 0 var(--color-border);
+  padding: var(--space-xs) var(--space-sm);
 }
 
 .navbar__inner {
@@ -111,7 +112,28 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-xl);
+  gap: var(--space-md);
+  margin: 0 auto;
+  background: rgba(253, 251, 247, 0.85);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-radius: 100px;
+  padding: 8px 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.navbar.scrolled .navbar__inner {
+  background: rgba(253, 251, 247, 0.95);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+@media (min-width: 768px) {
+  .navbar__inner {
+    padding: 12px 32px;
+    gap: var(--space-xl);
+  }
 }
 
 .navbar__logo {
@@ -126,14 +148,44 @@
 }
 
 .navbar__logo img {
-  height: 50px;
+  height: 40px;
   width: auto;
-  border-radius: 8px;
+  border-radius: 4px;
   transition: all var(--duration-normal) var(--ease-out);
 }
 
-.navbar.scrolled .navbar__logo img {
-  height: 44px;
+@media (min-width: 768px) {
+  .navbar__logo img {
+    height: 50px;
+  }
+  .navbar.scrolled .navbar__logo img {
+    height: 40px;
+  }
+}
+
+.navbar__mobile-brand {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .navbar__mobile-brand {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.65rem;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-noir);
+    text-align: center;
+    flex: 1;
+    white-space: nowrap;
+    padding: 0 var(--space-xs);
+  }
+  
+  .navbar__inner {
+    padding: 8px 16px;
+  }
 }
 
 .navbar__links {

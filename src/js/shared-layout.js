@@ -30,6 +30,7 @@ function getNavbarHTML() {
         <a href="/" class="navbar__logo" aria-label="Emira V Beauty Studio - Acasă">
           <img src="/images/gallery/Asset-1.png" alt="Emira V Beauty Studio" style="height: 40px; width: auto; object-fit: contain;">
         </a>
+        <div class="navbar__mobile-brand">Emira V<br>Beauty Studio</div>
         <div class="navbar__links">
           <a href="/" class="navbar__link">Acasă</a>
           <div class="navbar__services-trigger">
