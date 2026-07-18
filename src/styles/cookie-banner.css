@@ -64,12 +64,12 @@
 }
 
 .cookie-banner__btn--accept {
-  background: var(--color-noir);
-  color: var(--color-white);
+  background: var(--color-accent);
+  color: var(--color-noir); /* Dark text on pink passes WCAG contrast */
 }
 
 .cookie-banner__btn--accept:hover {
-  background: var(--color-charcoal);
+  background: var(--color-accent-hover);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
