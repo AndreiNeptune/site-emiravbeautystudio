@@ -28,7 +28,7 @@ function getNavbarHTML() {
     <div class="container">
       <div class="navbar__inner">
         <a href="/" class="navbar__logo" aria-label="Emira V Beauty Studio - Acasă">
-          <img src="/images/gallery/Asset-1.png" alt="Emira V Beauty Studio" style="height: 40px; width: auto; object-fit: contain;">
+          <img src="/images/gallery/Asset-1-sm.webp" alt="Emira V Beauty Studio" width="108" height="40" style="height: 40px; width: auto; object-fit: contain;">
         </a>
         <div class="navbar__mobile-brand">Emira V<br>Beauty Studio</div>
         <div class="navbar__links">
@@ -77,7 +77,7 @@ function getDrawerHTML() {
     <div class="mobile-drawer__overlay"></div>
     <div class="mobile-drawer__panel">
       <button class="mobile-drawer__close" aria-label="Închide meniul">✕</button>
-      <div class="mobile-drawer__logo"><img src="/images/gallery/Asset-1.png" alt="Emira V Beauty Studio" style="height: 38px; width: auto; object-fit: contain;"></div>
+      <div class="mobile-drawer__logo"><img src="/images/gallery/Asset-1-sm.webp" alt="Emira V Beauty Studio" width="108" height="40" style="height: 40px; width: auto; object-fit: contain;"></div>
       <nav class="mobile-drawer__nav">
         <a href="/" class="mobile-drawer__link">Acasă</a>
         
@@ -120,7 +120,7 @@ function getFooterHTML() {
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <img src="/images/gallery/Asset-1.png" alt="Emira V Beauty Studio" style="height: 44px; width: auto; object-fit: contain;">
+          <img src="/images/gallery/Asset-1-sm.webp" alt="Emira V Beauty Studio" width="108" height="40" style="height: 40px; width: auto; object-fit: contain;">
           <p>Salon de înfrumusețare: manichiură & pedichiură, coafor & vopsit, cosmetică, tratamente faciale, epilare cu ceară.</p>
           <div class="social-links" style="margin-top: 1.5rem;">
             <a href="https://www.instagram.com/emiravbeautystudio/" target="_blank" rel="noopener" aria-label="Instagram" style="color: var(--color-accent); font-size: 1.5rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
@@ -128,7 +128,7 @@ function getFooterHTML() {
             </a>
           </div>
           <div style="margin-top: 1.5rem; border-radius: 8px; overflow: hidden; height: 160px; max-width: 250px;">
-            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Strada%20Gradinarilor%2030%2C%20Pantelimon&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Strada%20Gradinarilor%2030%2C%20Pantelimon&t=&z=15&ie=UTF8&iwloc=&output=embed" title="Harta Google Maps - Emira V Beauty Studio"></iframe>
           </div>
         </div>
         <div>
