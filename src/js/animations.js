@@ -38,14 +38,7 @@ function initDomeReveal() {
 
   if (!hero || !domeWrapper) return;
 
-  // 1. Pin the hero section
-  ScrollTrigger.create({
-    trigger: hero,
-    start: "top top",
-    end: "bottom top", // keeps hero pinned while scrolling past it
-    pin: true,
-    pinSpacing: false, // allows domeWrapper to scroll up and overlap it
-  });
+  // Hero pinning removed to fix CLS (replaced with CSS position: sticky)
 
   // 2. Parallax and Fade for Hero Text
   // The user requested: moves up with 30-50% scroll speed (parallax) 
