@@ -128,7 +128,7 @@ function getFooterHTML() {
             </a>
           </div>
           <div style="margin-top: 1.5rem; border-radius: 8px; overflow: hidden; height: 160px; max-width: 250px;">
-            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Strada%20Gradinarilor%2030%2C%20Pantelimon&t=&z=15&ie=UTF8&iwloc=&output=embed" title="Harta Google Maps - Emira V Beauty Studio"></iframe>
+            <iframe loading="lazy" width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Strada%20Gradinarilor%2030%2C%20Pantelimon&t=&z=15&ie=UTF8&iwloc=&output=embed" title="Harta Google Maps - Emira V Beauty Studio"></iframe>
           </div>
         </div>
         <div>
