@@ -330,6 +330,14 @@
   flex-shrink: 0;
 }
 
+@media (min-width: 1024px) {
+  .navbar__cta .btn {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.75rem;
+    border-width: 1px;
+  }
+}
+
 /* Mobile Burger */
 .navbar__burger {
   display: none;
