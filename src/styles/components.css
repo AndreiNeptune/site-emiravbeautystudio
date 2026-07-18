@@ -354,6 +354,9 @@
   border-radius: 14px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
   transition: all var(--duration-normal) var(--ease-out);
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
 }
 
 .navbar.scrolled .navbar__burger {
