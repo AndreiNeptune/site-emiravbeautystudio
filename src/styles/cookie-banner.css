@@ -30,13 +30,13 @@
 
 .cookie-banner__content p {
   font-size: var(--text-sm);
-  color: var(--color-warm-gray);
+  color: var(--color-charcoal); /* Darkened for better contrast */
   margin: 0;
   line-height: var(--leading-normal);
 }
 
 .cookie-banner__content a {
-  color: var(--color-accent);
+  color: var(--color-promo); /* Darker pink for contrast */
   text-decoration: underline;
   font-weight: var(--weight-medium);
 }
@@ -64,14 +64,14 @@
 }
 
 .cookie-banner__btn--accept {
-  background: var(--color-accent);
+  background: var(--color-noir);
   color: var(--color-white);
 }
 
 .cookie-banner__btn--accept:hover {
-  background: var(--color-accent-hover);
+  background: var(--color-charcoal);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-gold);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .cookie-banner__btn--reject {
