@@ -108,7 +108,7 @@ function getDrawerHTML() {
       <div class="mobile-drawer__contact">
         <p><strong>Adresă:</strong> Str. Grădinarilor 30, Pantelimon, Ilfov</p>
         <p><strong>Telefon:</strong> <a href="tel:+40751666222">0751 666 222</a></p>
-        <p><strong>Program:</strong> L–S: 10:00–21:00 · D: Închis</p>
+        <p><strong>Program:</strong> L-V: 10:00–21:00 · S: 09:00–18:00 · D: Închis</p>
       </div>
     </div>
   </div>`;
@@ -158,7 +158,7 @@ function getFooterHTML() {
           <p class="footer__title">Contact</p>
           <p><strong>Telefon:</strong> <a href="tel:+40751666222">0751 666 222</a></p>
           <p><strong>Adresă:</strong> Str. Grădinarilor 30, Pantelimon, Ilfov</p>
-          <p><strong>Program L–S:</strong> 10:00–21:00</p>
+          <p><strong>Program:</strong> L-V: 10:00–21:00 | S: 09:00–18:00</p>
           <p><strong>Program D:</strong> Închis</p>
         </div>
       </div>
