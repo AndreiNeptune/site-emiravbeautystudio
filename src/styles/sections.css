@@ -9,8 +9,7 @@
 .hero {
   position: sticky;
   top: 0;
-  height: 100vh;
-  height: 100svh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -51,6 +50,7 @@
   position: relative;
   z-index: 2;
   max-width: 1000px;
+  width: 100%;
   padding-top: 120px;
   display: flex;
   flex-direction: column;
