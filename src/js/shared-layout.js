@@ -42,7 +42,7 @@ function getNavbarHTML() {
               <a href="/pedichiura" class="mega-menu__item">
                 <div class="mega-menu__text"><h4>Pedichiură</h4><p>Pedichiură clasică și SPA</p></div>
               </a>
-              <a href="/epilare-cu-ceara" class="mega-menu__item">
+              <a href="/epilare" class="mega-menu__item">
                 <div class="mega-menu__text"><h4>Epilare</h4><p>Ceară & Definitivă</p></div>
               </a>
               <a href="/cosmetica" class="mega-menu__item">
@@ -90,7 +90,7 @@ function getDrawerHTML() {
             <div class="mobile-drawer__submenu-inner">
               <a href="/manichiura">Manichiură</a>
               <a href="/pedichiura">Pedichiură</a>
-              <a href="/epilare-cu-ceara">Epilare</a>
+              <a href="/epilare">Epilare</a>
               <a href="/cosmetica">Cosmetică & Tratamente Faciale</a>
               <a href="/spalat-coafat">Coafor — Spălat & Coafat</a>
               <a href="/vopsit-tratamente">Coafor — Vopsit & Tratamente Păr</a>
@@ -136,7 +136,7 @@ function getFooterHTML() {
           <div class="footer__links">
             <a href="/manichiura">Manichiură</a>
             <a href="/pedichiura">Pedichiură</a>
-            <a href="/epilare-cu-ceara">Epilare</a>
+            <a href="/epilare">Epilare</a>
             <a href="/cosmetica">Cosmetică & Tratamente Faciale</a>
             <a href="/spalat-coafat">Coafor — Spălat & Coafat</a>
             <a href="/vopsit-tratamente">Coafor — Vopsit & Tratamente Păr</a>

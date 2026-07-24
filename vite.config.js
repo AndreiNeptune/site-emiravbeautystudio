@@ -34,7 +34,7 @@ export default defineConfig({
         vopsitTratamente: resolve(__dirname, 'vopsit-tratamente.html'),
         makeup: resolve(__dirname, 'make-up.html'),
         cosmetica: resolve(__dirname, 'cosmetica.html'),
-        epilare: resolve(__dirname, 'epilare-cu-ceara.html'),
+        epilare: resolve(__dirname, 'epilare.html'),
         pachete: resolve(__dirname, 'pachete-beauty.html'),
         galerie: resolve(__dirname, 'galerie.html'),
         despre: resolve(__dirname, 'despre-noi.html'),
