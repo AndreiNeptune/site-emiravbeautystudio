@@ -3,6 +3,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Fix for lag on mobile resize/URL bar
+ScrollTrigger.config({ ignoreMobileResize: true });
+
 export function initAnimations() {
   // Reveal elements on scroll
   const revealElements = document.querySelectorAll('.reveal');
