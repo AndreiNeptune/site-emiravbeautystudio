@@ -55,7 +55,7 @@ function initDomeReveal() {
         trigger: domeWrapper,
         start: "top bottom", // when dome starts entering from bottom
         end: "top 20%",      // completes fade out before the dome physically hits the text
-        scrub: true,
+        scrub: 1,
       }
     });
   }
@@ -70,7 +70,7 @@ function initDomeReveal() {
         trigger: domeWrapper,
         start: "top bottom",
         end: "top top",
-        scrub: true,
+        scrub: 1,
       }
     });
   }
@@ -90,7 +90,7 @@ function initDomeReveal() {
         trigger: domeWrapper,
         start: "top bottom",
         end: "top top",
-        scrub: true,
+        scrub: 1,
       }
     }
   );
@@ -106,7 +106,7 @@ function initParallaxImages() {
         trigger: img.parentElement,
         start: "top bottom",
         end: "bottom top",
-        scrub: true,
+        scrub: 1,
       }
     });
   });
