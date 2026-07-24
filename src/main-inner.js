@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAccordion();
   initGallery();
   initReviewsCarousel();
+  initLoadMore();
   initAnimations();
   initCookieBanner();
-  initLoadMore();
 });
