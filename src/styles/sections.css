@@ -57,6 +57,8 @@
   align-items: center;
   text-align: center;
   margin: 0 auto;
+  will-change: transform, opacity;
+  transform: translateZ(0);
 }
 
 .hero__kicker {
