@@ -1798,6 +1798,7 @@
   z-index: 2;
   background-color: var(--color-cream, #faf9f8);
   will-change: transform, clip-path;
+  transform: translateZ(0);
   overflow: hidden;
 }
 
@@ -1872,7 +1873,7 @@
   height: 120%; /* Extra height for parallax */
   object-fit: cover;
   object-position: center;
-  transform: translateY(-10%); /* Starting point */
+  transform: translateY(-10%) translateZ(0); /* Starting point */
   will-change: transform;
 }
 
