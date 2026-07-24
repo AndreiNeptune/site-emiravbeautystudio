@@ -55,7 +55,7 @@ function processHtmlFiles(dir) {
       }
 
       // Inject JS before </body>
-      const jsToInject = [...preloadLinks, ...scriptLinks].join('\n  ');
+      const jsToInject = [...preloadLinks, ...scriptLinks].map(link => link.replace('<script type="module"', '<script type="module" async')).join('\n  ');
       if (jsToInject) {
         content = content.replace('</body>', `  ${jsToInject}\n</body>`);
       }
