@@ -38,24 +38,26 @@ function processHtmlFiles(dir) {
         }
       }
 
-      // Find all JS scripts and module preloads (we want them at the bottom of the body)
+      // Find all JS scripts and module preloads
       const preloadRegex = /<link rel="modulepreload"[^>]+href="\/assets\/[^>]+>/g;
       const scriptRegex = /<script type="module" crossorigin src="\/assets\/[^>]+><\/script>/g;
 
       const preloadLinks = content.match(preloadRegex) || [];
       const scriptLinks = content.match(scriptRegex) || [];
 
-      // Remove them from current locations
+      // Remove scripts from current locations (we leave preloads in the head where Vite put them, or if Vite didn't put them there, we inject them there)
       preloadLinks.forEach(link => { content = content.replace(link, ''); });
       scriptLinks.forEach(link => { content = content.replace(link, ''); });
 
-      // Inject CSS styles before </head>
-      if (injectedStyles) {
-        content = content.replace('</head>', `${injectedStyles}</head>`);
+      // Inject CSS styles and Preloads before </head>
+      const preloadsToInject = preloadLinks.join('\n  ');
+      const headInjections = (injectedStyles + '\n  ' + preloadsToInject).trim();
+      if (headInjections) {
+        content = content.replace('</head>', `\n  ${headInjections}\n</head>`);
       }
 
       // Inject JS before </body>
-      const jsToInject = [...preloadLinks, ...scriptLinks].map(link => link.replace('<script type="module"', '<script type="module" async')).join('\n  ');
+      const jsToInject = scriptLinks.map(link => link.replace('<script type="module"', '<script type="module" async')).join('\n  ');
       if (jsToInject) {
         content = content.replace('</body>', `  ${jsToInject}\n</body>`);
       }
