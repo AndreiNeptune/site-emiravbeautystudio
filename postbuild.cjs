@@ -49,8 +49,16 @@ function processHtmlFiles(dir) {
       preloadLinks.forEach(link => { content = content.replace(link, ''); });
       scriptLinks.forEach(link => { content = content.replace(link, ''); });
 
+      // Generate preloads for the actual scripts (since Vite omits them for entry scripts)
+      const generatedPreloads = scriptLinks.map(scriptTag => {
+        const match = scriptTag.match(/src="(\/assets\/[^"]+)"/);
+        return match ? `<link rel="modulepreload" crossorigin href="${match[1]}">` : '';
+      }).filter(Boolean);
+
       // Inject CSS styles and Preloads before </head>
-      const preloadsToInject = preloadLinks.join('\n  ');
+      // We use a Set to remove any duplicate preloads just in case
+      const allPreloads = [...new Set([...preloadLinks, ...generatedPreloads])];
+      const preloadsToInject = allPreloads.join('\n  ');
       const headInjections = (injectedStyles + '\n  ' + preloadsToInject).trim();
       if (headInjections) {
         content = content.replace('</head>', `\n  ${headInjections}\n</head>`);
