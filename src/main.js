@@ -11,7 +11,7 @@ import { initReviewsCarousel } from './js/reviews.js';
 import { initCookieBanner } from './js/cookie-banner.js';
 import { initLoadMore } from './js/load-more.js';
 
-document.addEventListener('DOMContentLoaded', () => {
+function init() {
   // Set current year in footer
   document.querySelectorAll('[data-year]').forEach(el => {
     el.textContent = new Date().getFullYear();
@@ -25,4 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initLoadMore();
   initAnimations();
   initCookieBanner();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
