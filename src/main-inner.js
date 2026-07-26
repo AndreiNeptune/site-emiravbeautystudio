@@ -12,7 +12,7 @@ import { initReviewsCarousel } from './js/reviews.js';
 import { initCookieBanner } from './js/cookie-banner.js';
 import { initLoadMore } from './js/load-more.js';
 
-document.addEventListener('DOMContentLoaded', () => {
+function init() {
   // Inject shared layout (nav, drawer, footer)
   initSharedLayout();
 
@@ -29,4 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initLoadMore();
   initAnimations();
   initCookieBanner();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
