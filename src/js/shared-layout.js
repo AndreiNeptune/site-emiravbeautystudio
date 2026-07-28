@@ -61,7 +61,7 @@ function getNavbarHTML() {
           <a href="/contact" class="navbar__link">Contact</a>
         </div>
         <div class="navbar__cta">
-          <a href="tel:+40751666222" class="btn btn--gold">Programează-te</a>
+          <a onclick="dataLayer.push({'event': 'btn_programeaza'});" href="tel:+40751666222" class="btn btn--gold">Programează-te</a>
         </div>
         <button class="navbar__burger" id="burger" aria-label="Deschide meniul" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -103,7 +103,7 @@ function getDrawerHTML() {
         <a href="/contact" class="mobile-drawer__link">Contact</a>
       </nav>
       <div class="mobile-drawer__cta">
-        <a href="tel:+40751666222" class="btn btn--gold" style="width:100%;">Programează-te</a>
+        <a onclick="dataLayer.push({'event': 'btn_programeaza'});" href="tel:+40751666222" class="btn btn--gold" style="width:100%;">Programează-te</a>
       </div>
       <div class="mobile-drawer__contact">
         <p><strong>Adresă:</strong> Str. Grădinarilor 30, Pantelimon, Ilfov</p>
@@ -156,7 +156,7 @@ function getFooterHTML() {
         </div>
         <div class="footer__contact">
           <p class="footer__title">Contact</p>
-          <p><strong>Telefon:</strong> <a href="tel:+40751666222">0751 666 222</a></p>
+          <p><strong>Telefon:</strong> <a onclick="dataLayer.push({'event': 'btn_suna'});" href="tel:+40751666222">0751 666 222</a></p>
           <p><strong>Adresă:</strong> Str. Grădinarilor 30, Pantelimon, Ilfov</p>
           <p><strong>Program:</strong> L-V: 10:00–21:00 | S: 09:00–18:00</p>
           <p><strong>Program D:</strong> Închis</p>

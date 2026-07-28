@@ -72,6 +72,17 @@ function processHtmlFiles(dir) {
 
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Optimized (Inlined) CSS and moved JS in ${file}`);
+
+      // Create folder structure for clean URLs (Hostinger compatibility)
+      if (file !== 'index.html' && file !== '404.html') {
+        const folderName = file.replace('.html', '');
+        const folderPath = path.join(dir, folderName);
+        if (!fs.existsSync(folderPath)) {
+          fs.mkdirSync(folderPath);
+        }
+        fs.renameSync(filePath, path.join(folderPath, 'index.html'));
+        console.log(`Moved ${file} to ${folderName}/index.html`);
+      }
     }
   }
 }
