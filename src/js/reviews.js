@@ -70,12 +70,39 @@ export function initReviewsCarousel() {
     wrapper.innerHTML = `
       <div class="reviews-section-header">
         <h2 class="section-title">Clienți mulțumiți</h2>
+        <div class="reviews-nav">
+          <button class="reviews-nav-btn prev" aria-label="Înapoi">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <button class="reviews-nav-btn next" aria-label="Înainte">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
       </div>
       <div class="reviews-carousel">
         ${cardsHtml}
       </div>
     `;
     
+    // Carousel navigation
+    const carousel = wrapper.querySelector('.reviews-carousel');
+    const prevBtn = wrapper.querySelector('.reviews-nav-btn.prev');
+    const nextBtn = wrapper.querySelector('.reviews-nav-btn.next');
+
+    const getScrollAmount = () => {
+      const card = carousel.querySelector('.review-card');
+      return card ? card.offsetWidth + 24 : 350; // width + gap
+    };
+
+    if (prevBtn && nextBtn) {
+      prevBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+      });
+      nextBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+      });
+    }
+
     // Add event listeners for read more buttons
     const readMoreBtns = wrapper.querySelectorAll('.read-more-btn');
     readMoreBtns.forEach(btn => {

@@ -1,3 +1,13 @@
+import '@fontsource/marcellus';
+import '@fontsource/montserrat/400.css';
+import '@fontsource/montserrat/500.css';
+import '@fontsource/montserrat/600.css';
+import '@fontsource/montserrat/700.css';
+import '@fontsource/outfit/300.css';
+import '@fontsource/outfit/400.css';
+import '@fontsource/outfit/500.css';
+import '@fontsource/outfit/600.css';
+import '@fontsource/outfit/700.css';
 /* ═══════════════════════════════════════════════════════
    Inner Pages Entry Point — Loads shared layout + modules
    ═══════════════════════════════════════════════════════ */

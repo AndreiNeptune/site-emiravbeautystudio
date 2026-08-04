@@ -1,5 +1,5 @@
 export function initCookieBanner() {
-  const cookieName = 'elysia_cookies_accepted';
+  const cookieName = 'emirav_cookies_accepted';
   const hasConsented = localStorage.getItem(cookieName);
 
   if (hasConsented) return;
