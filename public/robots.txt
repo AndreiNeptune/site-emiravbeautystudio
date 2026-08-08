@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://emiravbeautystudio.ro/sitemap.xml
+Sitemap: https://www.emiravbeauty.ro/sitemap.xml

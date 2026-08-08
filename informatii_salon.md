@@ -1,5 +1,5 @@
 # Informații Emira V Beauty Studio
-Toate datele extrase de pe site-ul oficial: https://emiravbeautystudio.ro/
+Toate datele extrase de pe site-ul oficial: https://www.emiravbeauty.ro/
 
 ---
 
@@ -14,11 +14,11 @@ Toate datele extrase de pe site-ul oficial: https://emiravbeautystudio.ro/
   - Sâmbătă: 09:00 – 17:00
   - Duminică: Închis
 - **Link Programare (Cal.com):** cal.com/emira-v-beauty (furnizat în plan)
-- **Email:** contact@emiravbeautystudio.ro (presupus din format standard, dacă e cazul)
+- **Email:** contact@emiravbeauty.ro (presupus din format standard, dacă e cazul)
 - **Instagram / Social Media:** (Nu a fost detectat un link oficial de Instagram în codul sursă de pe prima pagină, însă formatul general folosit este @emiravbeautystudio)
 - **Logo URL (Dark/Light):** 
-  - https://emiravbeautystudio.ro/wp-content/uploads/2024/09/Logo-Alb.png
-  - https://emiravbeautystudio.ro/wp-content/uploads/2024/09/Logo-Negru.png
+  - https://www.emiravbeauty.ro/wp-content/uploads/2024/09/Logo-Alb.png
+  - https://www.emiravbeauty.ro/wp-content/uploads/2024/09/Logo-Negru.png
 
 ---
 
